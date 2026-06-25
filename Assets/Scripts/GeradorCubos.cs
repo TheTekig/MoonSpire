@@ -52,11 +52,13 @@ public class GeradorCubos : MonoBehaviour
                                                                 Random.Range(-3, 4)), 
                                                                 Quaternion.identity);
 
-        int tamanhoX = 1; //Random.Range(1, 6);
-        int tamanhoY = 1; //Random.Range(1, 5);
-        int tamanhoZ = 1; //Random.Range(1, 7);
+
+        int tamanhoX = Random.Range(1, 6);
+        int tamanhoY = Random.Range(1, 5);
+        int tamanhoZ = Random.Range(1, 7);
 
         ultimoCuboGerado.transform.localScale = new Vector3(tamanhoX, tamanhoY, tamanhoZ);
+        ultimoCuboGerado.transform.rotation = Quaternion.Euler(0, Random.Range(0, 360), 0);
 
         movimentoCubo.setObjeto(ultimoCuboGerado);
     }
